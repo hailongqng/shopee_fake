@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopee_fake/app/bloc/example_bloc.dart';
 import 'package:shopee_fake/app/models/example_obj.dart';
+import 'package:shopee_fake/common/constants/app_colors.dart';
 
 class ExamplePageArguments {
   final String title;
@@ -30,7 +31,7 @@ class ExamplePage extends StatelessWidget {
     // final appBloc = BlocProvider.of<AppBloc>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text(this.title),
+        title: Text(title),
       ),
       body: Center(
         child: Column(
@@ -38,6 +39,7 @@ class ExamplePage extends StatelessWidget {
           children: <Widget>[
             const Text(
               'You have pushed the button this many times:',
+              style: TextStyle(color: AppColors.primaryColor),
             ),
             const SizedBox(height: 40),
             StreamBuilder<ExampleObj>(

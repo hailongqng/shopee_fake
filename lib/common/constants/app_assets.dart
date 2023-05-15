@@ -1,3 +1,3 @@
 class AppAssets {
-  // static final logo = "assets/images/logo.png";
+  static const icShopee = "assets/icon/ic_shopee.svg";
 }

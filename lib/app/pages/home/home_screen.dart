@@ -68,40 +68,42 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: [
-          Expanded(
+          Flexible(
             flex: 2,
-            // child:
-            // Container(
-            //   decoration: const BoxDecoration(
-            //     color: Colors.red,
-            //     borderRadius: BorderRadius.only(
-            //       bottomLeft: Radius.circular(30),
-            //       bottomRight: Radius.circular(30),
-            //     ),
-            //   ),
-              child: Swiper.children(
-                autoplay: true,
-                pagination: const SwiperPagination(
-                    margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 30.0),
-                    builder: DotSwiperPaginationBuilder(
-                        color: Colors.white30,
-                        activeColor: Colors.white,
-                        size: 5.0,
-                        activeSize: 10.0)),
-                children: <Widget>[
-                  Image.asset(
+            child: Swiper.children(
+              autoplay: true,
+              pagination: const SwiperPagination(
+                  margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 30.0),
+                  builder: DotSwiperPaginationBuilder(
+                      color: Colors.white30,
+                      activeColor: Colors.white,
+                      size: 5.0,
+                      activeSize: 10.0)),
+              children: <Widget>[
+                ClipRRect(
+                  borderRadius: const BorderRadius.only(
+                    bottomRight: Radius.circular(40.0),
+                    bottomLeft: Radius.circular(40.0),
+                  ),
+                  child: Image.asset(
                     AppAssets.imgSecondPanel,
                     fit: BoxFit.cover,
                   ),
-                  Image.asset(
+                ),
+                ClipRRect(
+                  borderRadius: const BorderRadius.only(
+                    bottomRight: Radius.circular(30.0),
+                    bottomLeft: Radius.circular(30.0),
+                  ),
+                  child: Image.asset(
                     AppAssets.imgThirdPanel,
                     fit: BoxFit.cover,
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-          // ),
-          const Expanded(
+          ),
+          const Flexible(
             flex: 7,
             child: SizedBox(),
           )

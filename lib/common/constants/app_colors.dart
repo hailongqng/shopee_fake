@@ -2,6 +2,7 @@ import 'dart:ui';
 
 class AppColors {
   static const screenBackground = Color(0xFFF7F8FB);
+  static const screenBackground2 = Color(0xFFE8E8E8);
   static const primaryColor = Color.fromRGBO(238, 77, 45, 1);
   static const primaryColor60 = Color.fromRGBO(238, 77, 45, 0.6);
   static const primaryColor30 = Color.fromRGBO(238, 77, 45, 0.3);

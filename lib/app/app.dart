@@ -6,6 +6,7 @@ import 'package:shopee_fake/app/bloc/bloc_provider.dart';
 import 'package:shopee_fake/app/models/app_config.dart';
 import 'package:shopee_fake/app/pages/splash/splash_screen.dart';
 import 'package:shopee_fake/common/http_client.dart';
+import 'package:shopee_fake/generated/l10n.dart';
 
 class MobileApp extends StatelessWidget {
   final AppConfig config;
@@ -34,6 +35,9 @@ class MobileApp extends StatelessWidget {
               theme: ThemeData(
                 primarySwatch: Colors.blue,
               ),
+              localizationsDelegates: const [
+                S.delegate,
+              ],
               home: const SplashScreen(),
               routes: AppRoute.registerRoutes(),
             );
